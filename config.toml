@@ -1,4 +1,4 @@
-baseurl = "https://keeper.nunux.org"
+baseurl = "/"
 title = "Nunux Keeper"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
