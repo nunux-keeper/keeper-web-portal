@@ -1,0 +1,87 @@
+baseurl = "https://keeper.nunux.org"
+title = "Nunux Keeper"
+theme = "hugo-universal-theme"
+languageCode = "en-us"
+# Enable Google Analytics by entering your tracking code
+# googleAnalytics = ""
+
+# Define the number of posts per page
+paginate = 10
+
+[params]
+    viewMorePostLink = "/blog/"
+    author = "@ncarlier"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "default"
+
+    about_us = "<p>Nunux Keeper is a free software proudly crafted with <i class='fa fa-heart-o'></i> by <a href='https://twitter.com/ncarlier' target='_blank'>@ncarlier</p>"
+    copyright = "Copyright (c) 2017, Nunux Org; all rights reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/logo.png"
+
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
+[[params.menu]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+#[[params.menu]]
+#    name = "Blog"
+#    url  = "/blog/"
+#    weight = 2
+
+[[params.menu]]
+    name = "Hosting"
+    url  = "https://app.nunux.org/keeper"
+    weight = 3
+
+[[params.menu]]
+    name = "Sources"
+    icon = "github"
+    url  = "https://github.com/nunux-keeper"
+    weight = 4
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+
+[params.testimonials]
+    enable = false
+
+[params.see_more]
+    enable = true
+    icon = "fa fa-cloud"
+    title = "Do you want to try?"
+    subtitle = "You can use for free our hosted service... as long our server handle the load ;-)"
+    link_url = "https://app.nunux.org/keeper"
+    link_text = "Let's start content curation"
+
+[params.clients]
+    enable = true
+    title = "Under the hood"
+    subtitle = "Nunux Keeper is built upon solid rock technologies as:"
+
+[params.recent_posts]
+    enable = false
+    title = "From the blog"
+    subtitle = "Because this app is made with love it's seem logical to share how it has been built and what is planned for the next releases."

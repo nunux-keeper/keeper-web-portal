@@ -1,0 +1,10 @@
+weight: 3
+title: "Easy to integrate and operate"
+description: >
+  <ul class="list-style-none">
+    <li>RESTFul API</li>
+    <li>Command Line Interface</li>
+    <li>Metrics production</li>
+    <li>Designed to be scalable</li>
+  </ul>
+image: "img/carousel/cli.png"

@@ -1,0 +1,3 @@
+name: "Redis"
+image: "img/products/redis.png"
+url: "https://redis.io/"
