@@ -9,14 +9,12 @@ This project is the official web portal.
 Getting Started
 ---------------
 
-Install [Hugo](https://gohugo.io/overview/installing/).
-
 Then clone the repo and start the website:
 
 ```shell
 $ git clone https://github.com/nunux-keeper/keeper-web-portal.git
 $ cd keeper-web-portal
-$ hugo server -p 3000
+$ make mount start
 ```
 
 Deployment
