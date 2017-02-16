@@ -31,10 +31,10 @@ paginate = 10
     url  = "/"
     weight = 1
 
-#[[params.menu]]
-#    name = "Blog"
-#    url  = "/blog/"
-#    weight = 2
+[[params.menu]]
+    name = "Blog"
+    url  = "/blog/"
+    weight = 2
 
 [[params.menu]]
     name = "Hosting"
@@ -82,6 +82,6 @@ paginate = 10
     subtitle = "Nunux Keeper is built upon solid rock technologies as:"
 
 [params.recent_posts]
-    enable = false
+    enable = true
     title = "From the blog"
     subtitle = "Because this app is made with love it's seem logical to share how it has been built and what is planned for the next releases."
