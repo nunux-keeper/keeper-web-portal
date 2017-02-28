@@ -1,10 +1,10 @@
 +++
 title = "Behind the portal"
-date = "Sun, 26 Feb 2017 19:01:41 +0100"
+date = "2017-02-28T20:26:00+01:00"
 tags = ["golang","portal", "hugo"]
 categories = ["tech stack"]
 banner = "img/blog/hugo.jpg"
-draft = true
+draft = false
 +++
 
 ## From static page to static portal
