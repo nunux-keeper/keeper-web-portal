@@ -1,29 +1,30 @@
 .SILENT :
-.PHONY : up down install deploy deploy-github
+.PHONY : up down install deploy
 
 USERNAME:=nunux-keeper
 APPNAME:=keeper-web-portal
 
 # Define port
-PORT?=3000
+PORT?=1313
 PORTS_FLAGS=-p $(PORT):1313
 
 # Custom run flags
 RUN_CUSTOM_FLAGS?=$(PORTS_FLAGS)
+RUN_FLAGS=--rm -it $(RUN_CUSTOM_FLAGS)
 
 # Custom shell flags
 SHELL_CUSTOM_FLAGS=-P
 
 # Docker configuartion regarding the system architecture
-BASEIMAGE=node:6-onbuild
-ARM_BASEIMAGE=hypriot/rpi-node/6-onbuild
+BASEIMAGE=alpine:latest
 
 DEPLOY_DIR:=/var/www/html/keeper.nunux.org
 
 # Include common Make tasks
 ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-DOCKERFILES:=$(ROOT_DIR)/dockerfiles
-include $(DOCKERFILES)/common/_Makefile
+MAKEFILES:=$(ROOT_DIR)/makefiles
+include $(MAKEFILES)/help.Makefile
+include $(MAKEFILES)/docker.Makefile
 
 ## Install builded static files (needs root privileges)
 install: build
@@ -36,7 +37,3 @@ deploy:
 	echo "Deploying application..."
 	git push deploy dev:master
 
-## Deploy application to GitHub
-deploy-github:
-	echo "Deploying application to GitHub..."
-	npm run deploy

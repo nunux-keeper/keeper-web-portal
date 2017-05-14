@@ -106,13 +106,6 @@ git fetch upstream
 git merge upstream/master
 git push origin dev
 ```
-
-* Deploy new content to Github hosted website:
-
-```
-make deploy-github
-```
-
 * Deploy new content to self hosted website:
 
 ```
