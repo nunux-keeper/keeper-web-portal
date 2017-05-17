@@ -1,13 +1,11 @@
 +++
 title = "Self-hosting Nunux Keeper"
-date = "2017-03-06T14:09:43+01:00"
+date = "2017-05-17T22:30:22+02:00"
 tags = ["docker"]
 categories = ["howto"]
 banner = "img/blog/docker-logo.png"
-draft = true
+draft = false
 +++
-
-
 
 ![Self hosted][self-hosted]
 
