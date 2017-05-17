@@ -35,5 +35,5 @@ install: build
 ## Deploy application
 deploy:
 	echo "Deploying application..."
-	git push deploy dev:master
+	git push deploy master
 
