@@ -1,4 +1,8 @@
 weight: 5
 name: "Interoperability"
 icon: "fa fa-code"
-description: "Link other apps or services with your library. Create documents with the open and complete API, use a CLI like nerds, integrate other services thanks to NodeRed connector..."
+description: >
+  Link other apps or services with your library.
+  Create documents with the open and complete <a href="https://api.nunux.org/keeper/api-docs/">API</a>,
+  use a <a href="https://github.com/nunux-keeper/keeper-cli">CLI</a> like nerds,
+  integrate other services thanks to <a href="https://github.com/nunux-keeper/node-red-contrib-keeper">NodeRed connector</a>..."
