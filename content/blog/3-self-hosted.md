@@ -133,7 +133,7 @@ platform][keeper-app].*
 [keeper-docker]: https://github.com/nunux-keeper/keeper-docker
 [keeper-docker-readme]: https://github.com/nunux-keeper/keeper-docker/blob/master/README.md
 [keeper-app]: https://app.nunux.org
-[self-hosted]: /img/blog/self-hosted.png "Self hosted"
+[self-hosted]: /img/blog/self-hosted.jpg "Self hosted"
 [docker-logo]: /img/blog/docker-logo.png "Docker Logo"
 [context-diagram]: /img/blog/keeper-ctx-diag.svg "Keeper context diagram"
 [container-diagram]: /img/blog/keeper-ctn-diag.svg "Keeper container diagram"

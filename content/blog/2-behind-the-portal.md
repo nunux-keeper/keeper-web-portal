@@ -117,7 +117,7 @@ Unlike traditional CMS, static web site generators are great tools to create
 robust, secure, scalable, collaborative and **simple** websites.
 
 
-[old-homepage]: /img/blog/old-homepage.png "Old homepage"
+[old-homepage]: /img/blog/old-homepage.jpg "Old homepage"
 [hugo-logo]: /img/blog/hugo-logo.png "Hugo logo"
 [hugo-cli]: /img/blog/hugo-cli.png "Hugo CLI"
 [readme]: https://thejunkland.com/blog/how-to-write-good-readme.html
