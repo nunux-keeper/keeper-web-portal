@@ -9,7 +9,7 @@ MAINTAINER Nicolas Carlier <https://github.com/ncarlier>
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-ENV HUGO_VERSION=0.20.7
+ENV HUGO_VERSION=0.26
 RUN apk add --update wget ca-certificates && \
       cd /tmp/ && \
       wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
