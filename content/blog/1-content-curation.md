@@ -3,7 +3,7 @@ title = "What is content curation"
 date = "Mon, 13 Feb 2017 23:16:34 +0100"
 tags = ["content curation"]
 categories = ["story"]
-banner = "img/blog/curator.jpg"
+banner = "img/blog/curation-255.jpg"
 draft = false
 +++
 
@@ -59,7 +59,7 @@ I love to share my technology watch but I think it's also time to share my nerdy
 work.
 
 [wikipedia]: https://en.wikipedia.org/wiki/Curator
-[curator]: /img/blog/curator.jpg "Museum curator"
+[curator]: /img/blog/curation.jpg "Museum curator"
 [logo]: /img/logo.png "Nunux Keeper"
 [keeper]: https://github.com/ncarlier/nunux-keeper
 [reader]: https://reader.nunux.org

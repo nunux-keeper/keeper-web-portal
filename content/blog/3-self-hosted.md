@@ -3,11 +3,11 @@ title = "Self-hosting Nunux Keeper"
 date = "2017-05-17T22:30:22+02:00"
 tags = ["docker"]
 categories = ["howto"]
-banner = "img/blog/docker-logo.png"
+banner = "img/blog/self-hosting-255.jpg"
 draft = false
 +++
 
-![Self hosted][self-hosted]
+![Self hosting][self-hosting]
 
 Before running any script, let's have a quick overview of the software
 architecture.
@@ -133,7 +133,7 @@ platform][keeper-app].*
 [keeper-docker]: https://github.com/nunux-keeper/keeper-docker
 [keeper-docker-readme]: https://github.com/nunux-keeper/keeper-docker/blob/master/README.md
 [keeper-app]: https://app.nunux.org
-[self-hosted]: /img/blog/self-hosted.jpg "Self hosted"
+[self-hosting]: /img/blog/self-hosting.jpg "Self hosting"
 [docker-logo]: /img/blog/docker-logo.png "Docker Logo"
 [context-diagram]: /img/blog/keeper-ctx-diag.svg "Keeper context diagram"
 [container-diagram]: /img/blog/keeper-ctn-diag.svg "Keeper container diagram"

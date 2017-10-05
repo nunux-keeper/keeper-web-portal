@@ -3,7 +3,7 @@ title = "Nunux Keeper with Android"
 date = "2017-10-03T23:26:58+02:00"
 tags = ["android","api"]
 categories = ["howto"]
-banner = "img/blog/android.jpg"
+banner = "img/blog/android-255.jpg"
 +++
 
 Content curation is a day to day activity. Due to that, you may expect an

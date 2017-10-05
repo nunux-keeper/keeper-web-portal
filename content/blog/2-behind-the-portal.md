@@ -3,7 +3,7 @@ title = "Behind the portal"
 date = "2017-02-28T20:26:00+01:00"
 tags = ["golang","portal", "hugo"]
 categories = ["tech stack"]
-banner = "img/blog/hugo.jpg"
+banner = "img/blog/hugo-255.jpg"
 draft = false
 +++
 
