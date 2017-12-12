@@ -77,7 +77,7 @@ git co -b <n>-article-<title> upstream/<n>-article-<title>
 * Create the new article:
 
 ```
-hugo new blog/x-xxx.md
+hugo new content/blog/x-xxx.md
 ```
 
 * Check that this article is in draft mode: `draft = true`
@@ -85,7 +85,7 @@ hugo new blog/x-xxx.md
 * Once the article completed un-draft the document:
 
 ```
-hugo undraft blog/x-xxx.md
+hugo undraft content/blog/x-xxx.md
 # or manualy: 'draft = true' and update the date (with VIM: `:r! date -R`)
 ```
 
@@ -109,7 +109,7 @@ git push origin dev
 * Deploy new content to self hosted website:
 
 ```
-make deploy
+git push deploy master
 ```
 
 * Done!

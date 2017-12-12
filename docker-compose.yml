@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  #######################################
+  # Web portal
+  #######################################
+  portal:
+    image: "ncarlier/keeper-web-portal:latest"
+    volumes:
+      - ${PWD}:${APP_SRC_DIR:-/usr/src/app_src}
+    ports:
+      - "${PORT:-1313}:1313"

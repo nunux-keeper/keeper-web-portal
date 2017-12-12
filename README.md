@@ -14,7 +14,7 @@ Then clone the repo and start the website:
 ```shell
 $ git clone https://github.com/nunux-keeper/keeper-web-portal.git
 $ cd keeper-web-portal
-$ make mount start
+$ make start
 ```
 
 Deployment

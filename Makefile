@@ -1,39 +1,57 @@
 .SILENT :
-.PHONY : up down install deploy
 
-USERNAME:=nunux-keeper
+# Image name
+USERNAME:=ncarlier
 APPNAME:=keeper-web-portal
 
-# Define port
-PORT?=1313
-PORTS_FLAGS=-p $(PORT):1313
+# Compose files
+COMPOSE_FILES?=-f docker-compose.yml
 
-# Custom run flags
-RUN_CUSTOM_FLAGS?=$(PORTS_FLAGS)
-RUN_FLAGS=--rm -it $(RUN_CUSTOM_FLAGS)
-
-# Custom shell flags
-SHELL_CUSTOM_FLAGS=-P
-
-# Docker configuartion regarding the system architecture
-BASEIMAGE=alpine:latest
-
+# Deploy directory
 DEPLOY_DIR:=/var/www/html/keeper.nunux.org
 
 # Include common Make tasks
-ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-MAKEFILES:=$(ROOT_DIR)/makefiles
-include $(MAKEFILES)/help.Makefile
-include $(MAKEFILES)/docker.Makefile
+root_dir:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+makefiles:=$(root_dir)/makefiles
+include $(makefiles)/help.Makefile
+include $(makefiles)/docker/compose.Makefile
+include $(makefiles)/docker/cleanup.Makefile
 
-## Install builded static files (needs root privileges)
+all: help
+
+# Get Docker binaries version
+infos:
+	echo "Using $(shell docker --version)"
+	echo "Using $(shell docker-compose --version)"
+.PHONY: infos
+
+## Build Docker image
+build:
+	docker build --rm -t $(USERNAME)/$(APPNAME) .
+.PHONY: build
+
+## Run the container in foreground
+start:
+	echo "Running container..."
+	docker-compose $(COMPOSE_FILES) up --no-deps --no-build --abort-on-container-exit --exit-code-from portal portal
+.PHONY: start
+
+## Start required services
+deploy: infos compose-up
+.PHONY: up
+
+## Stop all services
+undeploy: compose-down-force
+.PHONY: down
+
+## Show services logs
+logs: compose-logs
+.PHONY: logs
+
+## Install as a service (needs root privileges)
 install: build
 	echo "Install generated files at deployment location..."
 	mkdir -p $(DEPLOY_DIR)
-	$(DOCKER) run --rm -v $(DEPLOY_DIR):$(VOLUME_CONTAINER_PATH)/public $(IMAGE) hugo
-
-## Deploy application
-deploy:
-	echo "Deploying application..."
-	git push deploy master
+	docker run --rm -v $(DEPLOY_DIR):/usr/src/app/public $(USERNAME)/$(APPNAME) hugo
+.PHONY: install
 
