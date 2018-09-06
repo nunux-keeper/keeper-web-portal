@@ -33,6 +33,11 @@ start:
 install:
 	echo "Install generated files at deployment location..."
 	mkdir -p $(DEPLOY_DIR)
-	docker run --rm -v $(DEPLOY_DIR):/usr/share/nginx/html -e "HUGO_BASE_URL=$(DEPLOY_BASE_URL)" monachus/hugo:v0.48 hugo -d /usr/share/nginx/html/
+	docker run --rm \
+		-v ${PWD}:/usr/share/blog \
+		-v $(DEPLOY_DIR):/usr/share/nginx/html \
+		-e "HUGO_BASEURL=$(DEPLOY_BASE_URL)" \
+		monachus/hugo:v0.48 \
+		hugo -d /usr/share/nginx/html/
 .PHONY: install
 
