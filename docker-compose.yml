@@ -1,11 +1,11 @@
-version: "2.1"
+version: "2.2"
 services:
   #######################################
   # Web portal
   #######################################
   portal:
-    image: "ncarlier/keeper-web-portal:latest"
+    image: "monachus/hugo:v0.48"
     volumes:
-      - ${PWD}:${APP_SRC_DIR:-/usr/src/app_src}
+      - ${PWD}:/usr/share/blog
     ports:
       - "${PORT:-1313}:1313"

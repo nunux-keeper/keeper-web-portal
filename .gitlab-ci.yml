@@ -1,4 +1,4 @@
-image: publysher/hugo
+image: "monachus/hugo:v0.48"
 
 pages:
   script:
@@ -8,7 +8,7 @@ pages:
     - public
   only:
   - master
-  
+
 test:
   script:
   - hugo
