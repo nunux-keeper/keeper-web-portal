@@ -42,10 +42,15 @@ paginate = 10
     weight = 3
 
 [[params.menu]]
+    name = "Documentation"
+    url  = "/doc/"
+    weight = 4
+
+[[params.menu]]
     name = "Sources"
     icon = "github"
     url  = "https://github.com/nunux-keeper"
-    weight = 4
+    weight = 5
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
